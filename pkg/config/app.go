@@ -11,7 +11,6 @@ var (
 )
 
 func Connect(){
-	
 	d,err := gorm.Open(os.Getenv("DB_NAME"),os.Getenv("DB_USER") + ":" + os.Getenv("DB_PASSWORD") + "/" + os.Getenv("TABLE_NAME")+"?charset=utf8&parseTime=True&loc=Local")
 	if(err!=nil){
 		panic(err)
